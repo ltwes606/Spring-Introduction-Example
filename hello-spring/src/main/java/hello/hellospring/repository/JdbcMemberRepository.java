@@ -135,7 +135,7 @@ public class JdbcMemberRepository implements MemberRepository {
             }
             return members;
         } catch (Exception exception) {
-            throw new IllegalArgumentException(exception);
+            throw new IllegalStateException(exception);
         } finally {
             close(connection, preparedStatement, resultSet);
         }
